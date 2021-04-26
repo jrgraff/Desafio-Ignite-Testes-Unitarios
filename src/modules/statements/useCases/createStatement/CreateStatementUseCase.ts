@@ -33,7 +33,7 @@ export class CreateStatementUseCase {
     const statementOperation = await this.statementsRepository.create({
       user_id,
       type,
-      amount,
+      amount: Number(amount),
       description
     });
 
